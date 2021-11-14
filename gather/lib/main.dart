@@ -130,16 +130,44 @@ Widget homePage = const CircleAvatar(
   radius: 400,
 );
 
+/*
 Widget resourcePage = Column(
-  children: [
-    Image.asset('images/resources0.png'),
-    Image.asset('images/resources1.png'),
-    Image.asset('images/resources2.png'),
-    Image.asset('images/resources3.png'),
-    Image.asset('images/resources4.png'),
-    Image.asset('images/resources5.png'),
-  ],
+ children: [
+   Image.asset('images/resources0.png'),
+   Image.asset('images/resources1.png'),
+   Image.asset('images/resources2.png'),
+   Image.asset('images/resources3.png'),
+   Image.asset('images/resources4.png'),
+   Image.asset('images/resources5.png'),
+ ],
+  
 );
+*/
+
+Widget resourcePage=ListView(
+
+  children: [
+   Image.asset('images/resources0.png'),
+   Text(''),
+   Image.asset('images/resources1.png'),
+   Text(''),
+   Image.asset('images/resources2.png'),
+   Text(''),
+   Image.asset('images/resources3.png'),
+   Text(''),
+   Image.asset('images/resources4.png'),
+   Text(''),
+   Image.asset('images/resources5.png'),
+   Text(''),
+ ],
+
+ //padding: EdgeInsets.only(top:10.0),
+
+);
+
+
+
+
 
 Widget faqPage = const Text(
   'Faqs',
