@@ -20,8 +20,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: _title,
+      theme: ThemeData(primarySwatch: Colors.cyan),
       home: MyStatefulWidget(),
     );
   }
@@ -63,7 +64,7 @@ class MyStatefulWidget extends StatefulWidget {
 /// This is the private State class that goes with MyStatefulWidget.
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   int _selectedIndex = 0;
-  //int imageIndex = 0;
+
   static final List<Widget> _widgetOptions = <Widget>[
     homePage,
     resourcePage,
