@@ -62,37 +62,12 @@ class MyStatefulWidget extends StatefulWidget {
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   int _selectedIndex = 0;
   //int imageIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold, );
-  static List<Widget> _widgetOptions = <Widget>[
-    const CircleAvatar(
-        backgroundImage: AssetImage('images/Logo.png'),
-        radius: 400,
-      ),
-
-     Column(
-       children: [
-        Image.asset('images/resources0.png'),
-        Image.asset('images/resources1.png'),
-        Image.asset('images/resources2.png'),
-        Image.asset('images/resources3.png'),
-        Image.asset('images/resources4.png'),
-        Image.asset('images/resources5.png'),
-      ],
-     ),
-
-    Text(
-      'Faqs',
-      style: optionStyle,
-    ),
-        Text(
-      'Links',
-      style: optionStyle,
-    ),
-        Text(
-      'Connect',
-      style: optionStyle,
-    ),
+  static final List<Widget> _widgetOptions = <Widget>[
+    homePage,
+    resourcePage,
+    faqPage,
+    linkPage,
+    connectPage
   ];
 
   void _onItemTapped(int index) {
@@ -149,3 +124,34 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
     );
   }
 }
+
+Widget homePage = const CircleAvatar(
+  backgroundImage: AssetImage('images/Logo.png'),
+  radius: 400,
+);
+
+Widget resourcePage = Column(
+  children: [
+    Image.asset('images/resources0.png'),
+    Image.asset('images/resources1.png'),
+    Image.asset('images/resources2.png'),
+    Image.asset('images/resources3.png'),
+    Image.asset('images/resources4.png'),
+    Image.asset('images/resources5.png'),
+  ],
+);
+
+Widget faqPage = const Text(
+  'Faqs',
+  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, ),
+);
+
+Widget linkPage = const Text(
+  'Links',
+  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, ),
+);
+
+Widget connectPage = const Text(
+  'Connect',
+  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, ),
+);
