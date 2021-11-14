@@ -29,6 +29,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  url_launcher: ^6.0.12
   google_fonts: ^2.1.0
 
 
@@ -69,6 +70,11 @@ flutter:
       - images/resources3.png
       - images/resources4.png
       - images/resources5.png
+      - images/link_9.png
+      - images/link_10.png
+      - images/link_11.png
+      - images/link_12.png
+
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

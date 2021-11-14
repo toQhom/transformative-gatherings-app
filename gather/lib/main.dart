@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 /// Flutter code sample for BottomNavigationBar
@@ -221,9 +222,25 @@ Widget faqPage = ListView(
   ],
 );
 
-Widget linkPage = const Text(
-  'Links',
-  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, ),
+Widget linkPage = Column(
+  children: <Widget>[
+    InkWell(
+      child: Image.asset('images/link_9.png'),
+      onTap: () => launch('https://bit.ly/3Df17U1')
+    ),
+    InkWell(
+      child: Image.asset('images/link_10.png'),
+      onTap: () => launch('https://www.nytimes.com/column/together-apart')
+    ),
+    InkWell(
+      child: Image.asset('images/link_11.png'),
+      onTap: () => launch('http://www.globalhumanproject.net/the-big-table2.html')
+    ),
+    InkWell(
+      child: Image.asset('images/link_12.png'),
+      onTap: () => launch('https://www.eventtia.com/en/blog/how-to-design-transformative-experiences-for-your-attendees')
+    ),
+  ],
 );
 
 Widget aboutPage =  Column(
