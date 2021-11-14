@@ -5,7 +5,7 @@
 -----------------------------------------
  **Overview of Gather**
 -----------------------------------------
-Gather is an app that is used to give people resources on how to have transformative gatherings, which are gatherings that seek to have lasting impacts on their participants in a way that does not lead to great divide. Within the app, users can find information on what transformative gatherings are, answers to common questions and misconceptions, tips on how to apply the principles in your daily life, and links to more resources about transformative gatherings.We provided links to TEDTalks, idea boards, and other websites that can help anyone plan more meaningful events to get people talking to each other in a poisitive and non-confrontational way. 
+Gather is an app that is used to give people resources on how to have transformative gatherings, which are gatherings that seek to have lasting impacts on their participants in a way that does not lead to great divide. Within the app, users can find information on what transformative gatherings are, answers to common questions and misconceptions, tips on how to apply the principles in your daily life, and links to more resources about transformative gatherings. We provided links to TEDTalks, idea boards, and other websites that can help anyone plan more meaningful events to get people talking to each other in a poisitive and non-confrontational way. 
 
 All of the code other than this README is inside the  gather folder. If you open the app or look through the /lib/main.dart file then you will see an about page that will give you more information about what these types of gatherings are.
  
