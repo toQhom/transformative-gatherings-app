@@ -14,7 +14,7 @@ void main() => runApp(const MyApp());
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  static const String _title = 'Flutter Code Sample';
+  static const String _title = 'Gather - An app for Transformative Gatherings';
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +25,31 @@ class MyApp extends StatelessWidget {
   }
 }
 
+  Widget _buildDecoratedImage(int imageIndex) => Expanded(
+      child: Container(
+        decoration: BoxDecoration(
+          border: Border.all(width: 10, color: Colors.black38),
+          borderRadius: const BorderRadius.all(Radius.circular(8)),
+        ),
+        margin: const EdgeInsets.all(4),
+        child: Image.asset('images/resources$imageIndex.jpg'),
+      ),
+    );
+
+ ListTile _tile(String title, String subtitle, IconData icon) {
+    return ListTile(
+      title: Text(title,
+          style: const TextStyle(
+            fontWeight: FontWeight.w500,
+            fontSize: 20,
+          )),
+      subtitle: Text(subtitle),
+      leading: Icon(
+        icon,
+        color: Colors.blue[500],
+      ),
+    );
+  }
 /// This is the stateful widget that the main application instantiates.
 class MyStatefulWidget extends StatefulWidget {
   const MyStatefulWidget({Key? key}) : super(key: key);
@@ -36,17 +61,26 @@ class MyStatefulWidget extends StatefulWidget {
 /// This is the private State class that goes with MyStatefulWidget.
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   int _selectedIndex = 0;
+  //int imageIndex = 0;
   static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: Colors.black,);
-  static const List<Widget> _widgetOptions = <Widget>[
+      TextStyle(fontSize: 30, fontWeight: FontWeight.bold, );
+  static List<Widget> _widgetOptions = <Widget>[
     const CircleAvatar(
         backgroundImage: AssetImage('images/Logo.png'),
         radius: 400,
       ),
-    Text(
-      'Resources',
-      style: optionStyle,
+
+     Column(
+       children: [
+        Image.asset('images/resources0.png'),
+        Image.asset('images/resources1.png'),
+        Image.asset('images/resources2.png'),
+        Image.asset('images/resources3.png'),
+        Image.asset('images/resources4.png'),
+        Image.asset('images/resources5.png'),
+      ],
      ),
+
     Text(
       'Faqs',
       style: optionStyle,
@@ -71,7 +105,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('BottomNavigationBar Sample'),
+        title: const Text('Gather - Make every Meeting Transformative'),
       ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
@@ -97,7 +131,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.school),
-            label: 'Connection',
+            label: 'About Us',
           ),
         ],
         currentIndex: _selectedIndex,
