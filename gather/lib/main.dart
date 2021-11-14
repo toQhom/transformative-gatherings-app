@@ -120,11 +120,13 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           BottomNavigationBarItem(
             icon: Icon(Icons.assistant),
             label: 'About',
+            
           ),
         ],
         currentIndex: _selectedIndex,
         unselectedItemColor: Colors.blueGrey,
         selectedItemColor: Colors.lightBlueAccent[700],
+        showUnselectedLabels: true,
         onTap: _onItemTapped,
       ),
     );
