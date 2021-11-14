@@ -37,19 +37,26 @@ class MyStatefulWidget extends StatefulWidget {
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+      TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: Colors.black,);
   static const List<Widget> _widgetOptions = <Widget>[
     const CircleAvatar(
         backgroundImage: AssetImage('images/Logo.png'),
         radius: 400,
       ),
     Text(
-      'Index 0: Home',
+      'Resources',
       style: optionStyle,
      ),
-
     Text(
-      'Index 2: School',
+      'Faqs',
+      style: optionStyle,
+    ),
+        Text(
+      'Links',
+      style: optionStyle,
+    ),
+        Text(
+      'Connect',
       style: optionStyle,
     ),
   ];
@@ -72,7 +79,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(
+              Icons.home,),  
             label: 'Home',
           ),
           BottomNavigationBarItem(
