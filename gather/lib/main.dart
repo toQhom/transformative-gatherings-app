@@ -114,19 +114,26 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.home,),  
+              Icons.home,
+            ),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.business),
+            icon: Icon(
+              Icons.business,
+            ),
             label: 'Resources',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.school),
+            icon: Icon(
+              Icons.school,
+            ),
             label: 'FAQs',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.school),
+            icon: Icon(
+              Icons.school,
+            ),
             label: 'Links',
           ),
           BottomNavigationBarItem(
@@ -135,7 +142,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
+        unselectedItemColor: Colors.blueGrey,
+        selectedItemColor: Colors.yellowAccent[700],
         onTap: _onItemTapped,
       ),
     );
