@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
 /// Flutter code sample for BottomNavigationBar
 
 // This example shows a [BottomNavigationBar] as it is used within a [Scaffold]
@@ -67,7 +69,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
     resourcePage,
     faqPage,
     linkPage,
-    connectPage
+    aboutPage
   ];
 
   void _onItemTapped(int index) {
@@ -151,7 +153,22 @@ Widget linkPage = const Text(
   style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, ),
 );
 
-Widget connectPage = const Text(
-  'Connect',
-  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, ),
+Widget aboutPage =  Column(
+  children: [
+    Text(''),
+    Text( 'What are Transformative Gatherings?',
+    style: TextStyle(fontSize: 40, color: Colors.cyan, fontStyle: FontStyle.italic), 
+    ),
+    Text( 'These are gatherings of individuals to foster quality connections and good controversy. Instead of surface level and ordinary gatherings that leave the social interactions to chance, these transformative gatherings foster an environment to encourage guests to continue the real conversations with them until after the gathering and perhaps lead them to influence change.',
+    style: TextStyle(fontSize: 20, color: Colors.grey), 
+    ),
+    Text(''),
+    Text( 'End the polite small talk',
+    style: TextStyle(fontSize: 40, color: Colors.cyan, fontStyle: FontStyle.italic), 
+    ),
+    Text( 'These are important in order to foster important conversations in everyday life without hostility. This is the embodiment of good controversies. These conversations are needed to encourage guests to create actual change about the issues they take interest in.',
+    style: TextStyle(fontSize: 20, color: Colors.grey), 
+    )    
+  ],
+  
 );
