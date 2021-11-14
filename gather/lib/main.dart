@@ -101,30 +101,30 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.business,
+              Icons.note,
             ),
             label: 'Resources',
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.school,
+              Icons.not_listed_location_rounded,
             ),
             label: 'FAQs',
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.school,
+            Icons.insert_link,
             ),
             label: 'Links',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'About Us',
+            icon: Icon(Icons.assistant),
+            label: 'About',
           ),
         ],
         currentIndex: _selectedIndex,
         unselectedItemColor: Colors.blueGrey,
-        selectedItemColor: Colors.yellowAccent[700],
+        selectedItemColor: Colors.lightBlueAccent[700],
         onTap: _onItemTapped,
       ),
     );
