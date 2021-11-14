@@ -157,7 +157,9 @@ Widget aboutPage =  Column(
   children: [
     Text(''),
     Text( 'What are Transformative Gatherings?',
-    style: TextStyle(fontSize: 40, color: Colors.cyan, fontStyle: FontStyle.italic), 
+    style: GoogleFonts.lato(
+    textStyle: TextStyle(color: Colors.cyan, fontSize: 40,fontStyle: FontStyle.italic),
+    ), 
     ),
     Text( 'These are gatherings of individuals to foster quality connections and good controversy. Instead of surface level and ordinary gatherings that leave the social interactions to chance, these transformative gatherings foster an environment to encourage guests to continue the real conversations with them until after the gathering and perhaps lead them to influence change.',
     style: TextStyle(fontSize: 20, color: Colors.grey), 
