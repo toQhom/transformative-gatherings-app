@@ -132,17 +132,50 @@ Widget homePage = const CircleAvatar(
   radius: 400,
 );
 
+/*
 Widget resourcePage = Column(
+ children: [
+   Image.asset('images/resources0.png'),
+   Image.asset('images/resources1.png'),
+   Image.asset('images/resources2.png'),
+   Image.asset('images/resources3.png'),
+   Image.asset('images/resources4.png'),
+   Image.asset('images/resources5.png'),
+ ],
+  
+);
+*/
+
+Widget resourcePage=ListView(
+
   children: [
-    Image.asset('images/resources0.png'),
-    Image.asset('images/resources1.png'),
-    Image.asset('images/resources2.png'),
-    Image.asset('images/resources3.png'),
-    Image.asset('images/resources4.png'),
-    Image.asset('images/resources5.png'),
-  ],
+   Image.asset('images/resources0.png'),
+   Text(''),
+   Image.asset('images/resources1.png'),
+   Text(''),
+   Image.asset('images/resources2.png'),
+   Text(''),
+   Image.asset('images/resources3.png'),
+   Text(''),
+   Image.asset('images/resources4.png'),
+   Text(''),
+   Image.asset('images/resources5.png'),
+   Text(''),
+ ],
+
+ //padding: EdgeInsets.only(top:10.0),
+
 );
 
+<<<<<<< HEAD
+
+
+
+
+Widget faqPage = const Text(
+  'Faqs',
+  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, ),
+=======
 Widget faqPage = Column(
   children: [
     Text(''),
@@ -195,6 +228,7 @@ Widget faqPage = Column(
     ),
 
   ],
+>>>>>>> 66e2cac81e20a38f92c8294e62f2fc565359f80b
 );
 
 Widget linkPage = const Text(
