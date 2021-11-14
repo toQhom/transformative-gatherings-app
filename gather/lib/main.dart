@@ -19,10 +19,13 @@ class MyApp extends StatelessWidget {
 
   static const String _title = 'Gather - An app for Transformative Gatherings';
 
+
+
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: _title,
+      theme: ThemeData(primarySwatch: Colors.cyan, textTheme: GoogleFonts.latoTextTheme(),),
       home: MyStatefulWidget(),
     );
   }
@@ -64,7 +67,7 @@ class MyStatefulWidget extends StatefulWidget {
 /// This is the private State class that goes with MyStatefulWidget.
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   int _selectedIndex = 0;
-  //int imageIndex = 0;
+
   static final List<Widget> _widgetOptions = <Widget>[
     homePage,
     resourcePage,
@@ -98,30 +101,30 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.business,
+              Icons.note,
             ),
             label: 'Resources',
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.school,
+              Icons.not_listed_location_rounded,
             ),
             label: 'FAQs',
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.school,
+            Icons.insert_link,
             ),
             label: 'Links',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'About Us',
+            icon: Icon(Icons.assistant),
+            label: 'About',
           ),
         ],
         currentIndex: _selectedIndex,
         unselectedItemColor: Colors.blueGrey,
-        selectedItemColor: Colors.yellowAccent[700],
+        selectedItemColor: Colors.lightBlueAccent[700],
         onTap: _onItemTapped,
       ),
     );
@@ -190,15 +193,11 @@ Widget faqPage = ListView(
       'Q: What is the difference in good controversy and hostility?',
       style: TextStyle(fontSize: 20, color: Colors.grey),
     ),
-    const Text(
-      'A: Good controversy sparks healthy conversations where both parties think deeply about the discussion had, while hostility comes from unhealthy conversations and neither side can move on to consider the discussion afterwards.',
-      style: TextStyle(fontSize: 20, color: Colors.grey),
-    ),
     const Text(''),
     const Text(''),
     Text(
       'Common Misconceptions',
-      style: GoogleFonts.lato(
+      style: GoogleFonts.pacifico(
         textStyle: const TextStyle(color: Colors.cyan, fontSize: 40,fontStyle: FontStyle.italic),
       ),
     ),
@@ -311,8 +310,8 @@ Widget aboutPage =  ListView(
   children: [
     const Text(''),
     Text( 'What are Transformative Gatherings?',
-    style: GoogleFonts.lato(
-    textStyle: TextStyle(color: Colors.cyan, fontSize: 40,fontStyle: FontStyle.italic),
+    style: GoogleFonts.pacifico(
+      textStyle: const TextStyle(color: Colors.cyan, fontSize: 40,fontStyle: FontStyle.italic),
     ),
     ),
     const Text(
