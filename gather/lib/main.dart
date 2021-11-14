@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:google_fonts/google_fonts.dart';
+
 /// Flutter code sample for BottomNavigationBar
 
 // This example shows a [BottomNavigationBar] as it is used within a [Scaffold]
@@ -16,10 +19,13 @@ class MyApp extends StatelessWidget {
 
   static const String _title = 'Gather - An app for Transformative Gatherings';
 
+
+
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: _title,
+      theme: ThemeData(primarySwatch: Colors.cyan, textTheme: GoogleFonts.latoTextTheme(),),
       home: MyStatefulWidget(),
     );
   }
@@ -61,13 +67,13 @@ class MyStatefulWidget extends StatefulWidget {
 /// This is the private State class that goes with MyStatefulWidget.
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   int _selectedIndex = 0;
-  //int imageIndex = 0;
+
   static final List<Widget> _widgetOptions = <Widget>[
     homePage,
     resourcePage,
     faqPage,
     linkPage,
-    connectPage
+    aboutPage
   ];
 
   void _onItemTapped(int index) {
@@ -95,63 +101,239 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.business,
+              Icons.note,
             ),
             label: 'Resources',
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.school,
+              Icons.not_listed_location_rounded,
             ),
             label: 'FAQs',
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.school,
+            Icons.insert_link,
             ),
             label: 'Links',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'About Us',
+            icon: Icon(Icons.assistant),
+            label: 'About',
+            
           ),
         ],
         currentIndex: _selectedIndex,
         unselectedItemColor: Colors.blueGrey,
-        selectedItemColor: Colors.yellowAccent[700],
+        selectedItemColor: Colors.lightBlueAccent[700],
+        showUnselectedLabels: true,
         onTap: _onItemTapped,
       ),
     );
   }
 }
 
-Widget homePage = const CircleAvatar(
-  backgroundImage: AssetImage('images/Logo.png'),
-  radius: 400,
+Widget homePage = Container(
+  decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('images/Logo.png'),
+            fit: BoxFit.cover,
+          ),
+  ),
 );
 
-Widget resourcePage = Column(
+Widget resourcePage=ListView(
+
   children: [
-    Image.asset('images/resources0.png'),
-    Image.asset('images/resources1.png'),
-    Image.asset('images/resources2.png'),
-    Image.asset('images/resources3.png'),
-    Image.asset('images/resources4.png'),
-    Image.asset('images/resources5.png'),
+   Image.asset('images/resources0.png'),
+   const Text(''),
+   Image.asset('images/resources1.png'),
+   const Text(''),
+   Image.asset('images/resources2.png'),
+   const Text(''),
+   Image.asset('images/resources3.png'),
+   const Text(''),
+   Image.asset('images/resources4.png'),
+   const Text(''),
+   Image.asset('images/resources5.png'),
+   const Text(''),
+ ],
+
+ //padding: EdgeInsets.only(top:10.0),
+
+);
+
+Widget faqPage = ListView(
+  children: [
+    const Text(''),
+    Text(
+      'Frequently Asked Questions',
+      style: GoogleFonts.pacifico(
+        textStyle: const TextStyle(color: Colors.cyan, fontSize: 40,fontStyle: FontStyle.italic),
+      ),
+    ),
+    const Text(''),
+    Text(
+      'Q: What events can be used for transformative gatherings?',
+      style: TextStyle(fontSize: 20, color: Colors.grey[700], fontWeight: FontWeight.bold),
+    ),
+    const Text(
+      'A:Any gathering of people, strangers or loved ones, can become a transformative gathering. This include birthday parties, baby showers, and large organized festivals.',
+      style: TextStyle(fontSize: 20, color: Colors.grey),
+    ),
+    const Text(''),
+    Text(
+      'Q: How do I start planning a transformative gathering?',
+      style: TextStyle(fontSize: 20, color: Colors.grey[700], fontWeight: FontWeight.bold),
+    ),
+    const Text(
+      'A: See the resource page for advice and directions on starting the planning process.',
+      style: TextStyle(fontSize: 20, color: Colors.grey),
+    ),
+    const Text(''),
+    Text(
+      'Q: What is the difference in good controversy and hostility?',
+      style: TextStyle(fontSize: 20, color: Colors.grey[700], fontWeight: FontWeight.bold),
+    ),
+    const Text(
+      'A: Good controversy sparks healthy conversations where both parties think deeply about the discussion had, while hostility comes from unhealthy conversations and neither side can move on to consider the discussion afterwards.',
+      style: TextStyle(fontSize: 20, color: Colors.grey),
+    ),
+    const Text(''),
+    const Text(''),
+    Text(
+      'Common Misconceptions',
+      style: GoogleFonts.pacifico(
+        textStyle: const TextStyle(color: Colors.cyan, fontSize: 40,fontStyle: FontStyle.italic),
+      ),
+    ),
+    const Text(''),
+    Text(
+      'I could never use this with my family.',
+      style: TextStyle(fontSize: 22, color: Colors.grey[700], fontWeight: FontWeight.bold),
+    ),
+    const Text(
+      'A family holiday can be organized to foster a transformative gathering as well as any gathering of people. A hostile Christmas dinner could develop into good controversy and eye-opening connections with the practices of a transformative gathering.',
+      style: TextStyle(fontSize: 20, color: Colors.grey),
+    ),
+    const Text(''),
+    Text(
+      'This can only happen on a large scale event with strangers.',
+      style: TextStyle(fontSize: 20, color: Colors.grey[700], fontWeight: FontWeight.bold),
+    ),
+    const Text(
+      'Transformative gatherings are meant to be used to upgrade everyday interactions to foster meaningful connections with both strangers and loved ones.',
+      style: TextStyle(fontSize: 20, color: Colors.grey),
+    ),
+
   ],
 );
 
-Widget faqPage = const Text(
-  'Faqs',
-  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, ),
+Widget linkPage = ListView(
+  scrollDirection: Axis.horizontal,
+  children: <Widget>[
+    InkWell(
+      child: Container(
+        padding: const EdgeInsets.all(50),
+        height: 150,
+        width: 370,
+        decoration: BoxDecoration(
+          image: const DecorationImage(
+            image: AssetImage('images/link_9.png'),
+            fit: BoxFit.contain,
+          ),
+          border: Border.all(
+            color: Colors.grey,
+            width: 8,
+          ),
+          borderRadius: BorderRadius.circular(12),
+        ),
+      ),
+      onTap: () => launch('https://bit.ly/3Df17U1')
+    ),
+    InkWell(
+      child: Container(
+        padding: const EdgeInsets.all(10),
+        height: 150,
+        width: 370,
+        decoration: BoxDecoration(
+          image: const DecorationImage(
+            image: AssetImage('images/link_10.png'),
+            fit: BoxFit.contain,
+          ),
+          border: Border.all(
+            color: Colors.grey,
+            width: 8,
+          ),
+          borderRadius: BorderRadius.circular(12),
+        ),
+      ),
+      onTap: () => launch('https://www.nytimes.com/column/together-apart')
+    ),
+    InkWell(
+      child: Container(
+        padding: const EdgeInsets.all(10),
+        height: 150,
+        width: 370,
+        decoration: BoxDecoration(
+          image: const DecorationImage(
+            image: AssetImage('images/link_11.png'),
+            fit: BoxFit.contain,
+          ),
+          border: Border.all(
+            color: Colors.grey,
+            width: 8,
+          ),
+          borderRadius: BorderRadius.circular(12),
+        ),
+      ),
+      onTap: () => launch('http://www.globalhumanproject.net/the-big-table2.html')
+    ),
+    InkWell(
+      child: Container(
+        padding: const EdgeInsets.all(10),
+        height: 150,
+        width: 370,
+        decoration: BoxDecoration(
+          image: const DecorationImage(
+            image: AssetImage('images/link_12.png'),
+            fit: BoxFit.contain,
+          ),
+          border: Border.all(
+            color: Colors.grey,
+            width: 8,
+          ),
+          borderRadius: BorderRadius.circular(12),
+        ),
+      ),
+      onTap: () => launch('https://www.eventtia.com/en/blog/how-to-design-transformative-experiences-for-your-attendees')
+    ),
+  ],
 );
 
-Widget linkPage = const Text(
-  'Links',
-  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, ),
-);
+Widget aboutPage =  ListView(
+  children: [
+    const Text(''),
+    Text( 'What are Transformative Gatherings?',
+    style: GoogleFonts.pacifico(
+      textStyle: const TextStyle(color: Colors.cyan, fontSize: 40,fontStyle: FontStyle.italic),
+    ),
+    ),
+    const Text(
+      'These are gatherings of individuals to foster quality connections and good controversy. Instead of surface level and ordinary gatherings that leave the social interactions to chance, these transformative gatherings foster an environment to encourage guests to continue the real conversations with them until after the gathering and perhaps lead them to influence change.',
+      style: TextStyle(fontSize: 20, color: Colors.grey),
+    ),
+    const Text(''),
+    Text(
+      'End the polite small talk',
+      style: GoogleFonts.pacifico(
+        textStyle: const TextStyle(color: Colors.cyan, fontSize: 40,fontStyle: FontStyle.italic),
+      ),
+    ),
+    const Text(
+      'These are important in order to foster important conversations in everyday life without hostility. This is the embodiment of good controversies. These conversations are needed to encourage guests to create actual change about the issues they take interest in.',
+      style: TextStyle(fontSize: 20, color: Colors.grey),
+    )
+  ],
 
-Widget connectPage = const Text(
-  'Connect',
-  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, ),
 );

@@ -29,6 +29,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  url_launcher: ^6.0.12
+  google_fonts: ^2.1.0
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -61,13 +63,8 @@ flutter:
   assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
-      - images/Logo.png
-      - images/resources1.png
-      - images/resources0.png
-      - images/resources2.png
-      - images/resources3.png
-      - images/resources4.png
-      - images/resources5.png
+      - images/
+
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -81,7 +78,7 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
+  #fonts:
   #   - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf
@@ -92,6 +89,18 @@ flutter:
   #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
-  #
+  #   - family: Roboto
+  #     fonts:
+  #       - asset: fonts/Roboto-Light.ttf
+  #         weight: 300
+  #       - asset: fonts/Roboto-Thin.ttf
+  #         weight: 100
+  #       - asset: fonts/Roboto-Italic.ttf
+  #         style: italic
+#
+      #- family: Indies
+      #  fonts:
+      #  - asset: fonts/IndieFlower-Regular.ttf
+  
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
