@@ -12,18 +12,20 @@ import 'package:google_fonts/google_fonts.dart';
 // and displays a corresponding message in the center of the [Scaffold].
 
 void main() => runApp(const MyApp());
-
+  
 /// This is the main application widget.
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
   static const String _title = 'Gather - An app for Transformative Gatherings';
+  
 
+  
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: _title,
-      theme: ThemeData(primarySwatch: Colors.cyan),
+      theme: ThemeData(primarySwatch: Colors.cyan, textTheme: GoogleFonts.latoTextTheme(),),
       home: MyStatefulWidget(),
     );
   }
@@ -134,19 +136,6 @@ Widget homePage = const CircleAvatar(
   radius: 400,
 );
 
-/*
-Widget resourcePage = Column(
- children: [
-   Image.asset('images/resources0.png'),
-   Image.asset('images/resources1.png'),
-   Image.asset('images/resources2.png'),
-   Image.asset('images/resources3.png'),
-   Image.asset('images/resources4.png'),
-   Image.asset('images/resources5.png'),
- ],
-);
-*/
-
 Widget resourcePage=ListView(
 
   children: [
@@ -172,7 +161,7 @@ Widget faqPage = ListView(
   children: [
     Text(''),
     Text( 'Frequently Asked Questions',
-    style: GoogleFonts.lato(
+    style: GoogleFonts.pacifico(
     textStyle: TextStyle(color: Colors.cyan, fontSize: 40,fontStyle: FontStyle.italic),
     ),
     ),
@@ -200,11 +189,10 @@ Widget faqPage = ListView(
     Text(''),
     Text(''),
     Text( 'Common Misconceptions',
-    style: GoogleFonts.lato(
+    style: GoogleFonts.pacifico(
     textStyle: TextStyle(color: Colors.cyan, fontSize: 40,fontStyle: FontStyle.italic),
     ),
     ),
-    Text(''),
     Text(''),
     Text( 'I could never use this with my family.',
     style: TextStyle(fontSize: 20, color: Colors.grey),
@@ -248,7 +236,7 @@ Widget aboutPage =  ListView(
   children: [
     Text(''),
     Text( 'What are Transformative Gatherings?',
-    style: GoogleFonts.lato(
+    style: GoogleFonts.pacifico(
     textStyle: TextStyle(color: Colors.cyan, fontSize: 40,fontStyle: FontStyle.italic),
     ),
     ),
@@ -257,8 +245,9 @@ Widget aboutPage =  ListView(
     ),
     Text(''),
     Text( 'End the polite small talk',
-    style: TextStyle(fontSize: 40, color: Colors.cyan, fontStyle: FontStyle.italic),
-    ),
+    style: GoogleFonts.pacifico(
+    textStyle: TextStyle(color: Colors.cyan, fontSize: 40,fontStyle: FontStyle.italic),
+    ), ),
     Text( 'These are important in order to foster important conversations in everyday life without hostility. This is the embodiment of good controversies. These conversations are needed to encourage guests to create actual change about the issues they take interest in.',
     style: TextStyle(fontSize: 20, color: Colors.grey),
     )
