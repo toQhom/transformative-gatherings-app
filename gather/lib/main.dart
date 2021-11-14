@@ -167,16 +167,7 @@ Widget resourcePage=ListView(
 
 );
 
-<<<<<<< HEAD
-
-
-
-
-Widget faqPage = const Text(
-  'Faqs',
-  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, ),
-=======
-Widget faqPage = Column(
+Widget faqPage = ListView(
   children: [
     Text(''),
     Text( 'Frequently Asked Questions',
@@ -228,7 +219,6 @@ Widget faqPage = Column(
     ),
 
   ],
->>>>>>> 66e2cac81e20a38f92c8294e62f2fc565359f80b
 );
 
 Widget linkPage = const Text(
