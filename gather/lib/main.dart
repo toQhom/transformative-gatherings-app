@@ -143,7 +143,6 @@ Widget resourcePage = Column(
    Image.asset('images/resources4.png'),
    Image.asset('images/resources5.png'),
  ],
-  
 );
 */
 
@@ -174,55 +173,56 @@ Widget faqPage = ListView(
     Text( 'Frequently Asked Questions',
     style: GoogleFonts.lato(
     textStyle: TextStyle(color: Colors.cyan, fontSize: 40,fontStyle: FontStyle.italic),
-    ), 
+    ),
     ),
     Text(''),
     Text( 'Q: What events can be used for transformative gatherings?',
-    style: TextStyle(fontSize: 20, color: Colors.grey), 
+    style: TextStyle(fontSize: 20, color: Colors.grey),
     ),
     Text( 'A:Any gathering of people, strangers or loved ones, can become a transformative gathering. This include birthday parties, baby showers, and large organized festivals.',
-    style: TextStyle(fontSize: 20, color: Colors.grey), ),
+    style: TextStyle(fontSize: 20, color: Colors.grey),
+    ),
     Text(''),
     Text( 'Q: How do I start planning a transformative gathering?',
-    style: TextStyle(fontSize: 20, color: Colors.grey), 
+    style: TextStyle(fontSize: 20, color: Colors.grey),
     ),
     Text( 'A: See the resource page for advice and directions on starting the planning process.',
-    style: TextStyle(fontSize: 20, color: Colors.grey), 
+    style: TextStyle(fontSize: 20, color: Colors.grey),
     ),
     Text(''),
     Text( 'Q: What is the difference in good controversy and hostility?',
-    style: TextStyle(fontSize: 20, color: Colors.grey), 
+    style: TextStyle(fontSize: 20, color: Colors.grey),
     ),
     Text( 'A: Good controversy sparks healthy conversations where both parties think deeply about the discussion had, while hostility comes from unhealthy conversations and neither side can move on to consider the discussion afterwards.',
-    style: TextStyle(fontSize: 20, color: Colors.grey), 
+    style: TextStyle(fontSize: 20, color: Colors.grey),
     ),
     Text(''),
     Text(''),
     Text( 'Common Misconceptions',
     style: GoogleFonts.lato(
     textStyle: TextStyle(color: Colors.cyan, fontSize: 40,fontStyle: FontStyle.italic),
-    ), 
+    ),
     ),
     Text(''),
     Text(''),
     Text( 'I could never use this with my family.',
-    style: TextStyle(fontSize: 20, color: Colors.grey), 
+    style: TextStyle(fontSize: 20, color: Colors.grey),
     ),
     Text( 'A family holiday can be organized to foster a transformative gathering as well as any gathering of people. A hostile Christmas dinner could develop into good controversy and eye-opening connections with the practices of a transformative gathering.',
-    style: TextStyle(fontSize: 20, color: Colors.grey), 
+    style: TextStyle(fontSize: 20, color: Colors.grey),
     ),
     Text(''),
     Text( 'This can only happen on a large scale event with strangers.',
-    style: TextStyle(fontSize: 20, color: Colors.grey), 
+    style: TextStyle(fontSize: 20, color: Colors.grey),
     ),
     Text( 'Transformative gatherings are meant to be used to upgrade everyday interactions to foster meaningful connections with both strangers and loved ones.',
-    style: TextStyle(fontSize: 20, color: Colors.grey), 
+    style: TextStyle(fontSize: 20, color: Colors.grey),
     ),
 
   ],
 );
 
-Widget linkPage = Column(
+Widget linkPage = ListView(
   children: <Widget>[
     InkWell(
       child: Image.asset('images/link_9.png'),
@@ -243,24 +243,24 @@ Widget linkPage = Column(
   ],
 );
 
-Widget aboutPage =  Column(
+Widget aboutPage =  ListView(
   children: [
     Text(''),
     Text( 'What are Transformative Gatherings?',
     style: GoogleFonts.lato(
     textStyle: TextStyle(color: Colors.cyan, fontSize: 40,fontStyle: FontStyle.italic),
-    ), 
+    ),
     ),
     Text( 'These are gatherings of individuals to foster quality connections and good controversy. Instead of surface level and ordinary gatherings that leave the social interactions to chance, these transformative gatherings foster an environment to encourage guests to continue the real conversations with them until after the gathering and perhaps lead them to influence change.',
-    style: TextStyle(fontSize: 20, color: Colors.grey), 
+    style: TextStyle(fontSize: 20, color: Colors.grey),
     ),
     Text(''),
     Text( 'End the polite small talk',
-    style: TextStyle(fontSize: 40, color: Colors.cyan, fontStyle: FontStyle.italic), 
+    style: TextStyle(fontSize: 40, color: Colors.cyan, fontStyle: FontStyle.italic),
     ),
     Text( 'These are important in order to foster important conversations in everyday life without hostility. This is the embodiment of good controversies. These conversations are needed to encourage guests to create actual change about the issues they take interest in.',
-    style: TextStyle(fontSize: 20, color: Colors.grey), 
-    )    
+    style: TextStyle(fontSize: 20, color: Colors.grey),
+    )
   ],
-  
+
 );
