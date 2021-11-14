@@ -63,17 +63,7 @@ flutter:
   assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
-      - images/Logo.png
-      - images/resources1.png
-      - images/resources0.png
-      - images/resources2.png
-      - images/resources3.png
-      - images/resources4.png
-      - images/resources5.png
-      - images/link_9.png
-      - images/link_10.png
-      - images/link_11.png
-      - images/link_12.png
+      - images/
 
 
 
