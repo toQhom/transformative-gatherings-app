@@ -143,9 +143,58 @@ Widget resourcePage = Column(
   ],
 );
 
-Widget faqPage = const Text(
-  'Faqs',
-  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, ),
+Widget faqPage = Column(
+  children: [
+    Text(''),
+    Text( 'Frequently Asked Questions',
+    style: GoogleFonts.lato(
+    textStyle: TextStyle(color: Colors.cyan, fontSize: 40,fontStyle: FontStyle.italic),
+    ), 
+    ),
+    Text(''),
+    Text( 'Q: What events can be used for transformative gatherings?',
+    style: TextStyle(fontSize: 20, color: Colors.grey), 
+    ),
+    Text( 'A:Any gathering of people, strangers or loved ones, can become a transformative gathering. This include birthday parties, baby showers, and large organized festivals.',
+    style: TextStyle(fontSize: 20, color: Colors.grey), ),
+    Text(''),
+    Text( 'Q: How do I start planning a transformative gathering?',
+    style: TextStyle(fontSize: 20, color: Colors.grey), 
+    ),
+    Text( 'A: See the resource page for advice and directions on starting the planning process.',
+    style: TextStyle(fontSize: 20, color: Colors.grey), 
+    ),
+    Text(''),
+    Text( 'Q: What is the difference in good controversy and hostility?',
+    style: TextStyle(fontSize: 20, color: Colors.grey), 
+    ),
+    Text( 'A: Good controversy sparks healthy conversations where both parties think deeply about the discussion had, while hostility comes from unhealthy conversations and neither side can move on to consider the discussion afterwards.',
+    style: TextStyle(fontSize: 20, color: Colors.grey), 
+    ),
+    Text(''),
+    Text(''),
+    Text( 'Common Misconceptions',
+    style: GoogleFonts.lato(
+    textStyle: TextStyle(color: Colors.cyan, fontSize: 40,fontStyle: FontStyle.italic),
+    ), 
+    ),
+    Text(''),
+    Text(''),
+    Text( 'I could never use this with my family.',
+    style: TextStyle(fontSize: 20, color: Colors.grey), 
+    ),
+    Text( 'A family holiday can be organized to foster a transformative gathering as well as any gathering of people. A hostile Christmas dinner could develop into good controversy and eye-opening connections with the practices of a transformative gathering.',
+    style: TextStyle(fontSize: 20, color: Colors.grey), 
+    ),
+    Text(''),
+    Text( 'This can only happen on a large scale event with strangers.',
+    style: TextStyle(fontSize: 20, color: Colors.grey), 
+    ),
+    Text( 'Transformative gatherings are meant to be used to upgrade everyday interactions to foster meaningful connections with both strangers and loved ones.',
+    style: TextStyle(fontSize: 20, color: Colors.grey), 
+    ),
+
+  ],
 );
 
 Widget linkPage = const Text(
